@@ -1,0 +1,21 @@
+body{
+    font-size: 19px;
+    font-family: arial;
+    padding: 10px 0 0 20px;
+counter-reset: section;
+}
+
+h1{
+    font-size: 20px;
+    margin-bottom: 35px;
+    color: green;
+    counter-reset: subsection;
+}
+h1::before{
+    content:"section " counter(section)":";
+    counter-increment: section;
+}
+h2::before{
+    content: counter(section)"." counter(subsection)":";
+    counter-increment: subsection;
+}

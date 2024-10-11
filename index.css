@@ -1,0 +1,16 @@
+body{
+    font-size: 19px;
+    font-family: arial;
+    padding: 10px 0 0 20px;
+    counter-reset: my-counter 0;
+}
+h1{
+    font-size: 50px;
+    margin-bottom: 35px;
+    color: green;
+}
+h2::before{
+    content: "chapter "  counter(my-counter)" : ";
+    counter-increment: my-counter  1;
+    color:brown;
+}
